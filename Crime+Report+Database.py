@@ -17,18 +17,12 @@ cur.execute("CREATE DATABASE crime_db;")
 conn.close()
 
 
-# In[334]:
-
-
 """Connect to Crime database and create schema"""
 
 conn = psycopg2.connect(dbname="crime_db",user="dq")
 conn.autocommit = True
 cur = conn.cursor()
 cur.execute("CREATE SCHEMA crimes;")
-
-
-# In[335]:
 
 
 """Read CSV file"""
